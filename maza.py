@@ -2,9 +2,13 @@
 # Name: Jerrod Bolton
 # Date: Nov 20,2025
 # Python class 235 Programming I - Assignment Function and Loops
+# For the assignment, I'll be adding functions and loops to my maze game. this is so that the # gamer don't have to start over every time they make a wrong move.
 
 # I would like to make a program that simulates a simple Maze game. Where a people can navigate through a maze using text commands.
-pass
+
+
+# character_detail = []
+
 def  maze_navigation(): 
     # Maze navigation simulation
     # the correct answers to get through the maze are south, west, east, north.
@@ -73,6 +77,7 @@ def  maze_navigation():
         print("Maybe next time! Goodbye!")
 
 
+    
 def create_character():  
     
     # i also would lie to save the character details to a text file. 
@@ -113,6 +118,19 @@ def create_character():
             print(f"Great! Your character {character_name} has been created.")
             print("          Now, let's navigate through the maze!"        )
             print("=======================================================")
+            
+
+    
+        # character_detail.append(character_name)
+        # character_detail.append(character_design)
+        # character_detail.append(character_origin)
+        # character_detail.append(character_eye_color)
+        # character_detail.append(character_hair_color)
+        # character_detail.append(character_age)
+
+
+    
+
     else:
         print("You chose not to save your character.")
      
