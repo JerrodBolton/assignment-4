@@ -1,11 +1,11 @@
 
 # Name: Jerrod Bolton
-# Date: Nov 12, 2025
-# Python class 235 Programming I - Assignment Input and Output
+# Date: Nov 20,2025
+# Python class 235 Programming I - Assignment Function and Loops
 
 # I would like to make a program that simulates a simple Maze game. Where a people can navigate through a maze using text commands.
 pass
-def  maze_navigation():
+def  maze_navigation(): 
     # Maze navigation simulation
     # the correct answers to get through the maze are south, west, east, north.
 
@@ -25,13 +25,8 @@ def  maze_navigation():
             print("Round 1 complete! Starting round 2...")
             # this is the second round that the user will play through.
             directions = input("What directions would like to go? (north/south/east/west): ").lower()
-            if directions == 'north':
-                print("You moved north and found a dead end. Try again!")
-            elif directions == 'south':
-                print("You moved south and found a dead end. Try again!")
-            elif directions == 'east':
-                print("You moved east and found a dead end. Try again!")
-            elif directions == 'west':
+            while directions != "west":
+         
                 print("You moved west and move to round three!")
                 print("=======================================================")
                 print("Congratulations on completed round two!")
@@ -65,7 +60,6 @@ def  maze_navigation():
                     print("You moved west and found a dead end. Try again!")
                 else:
                     print("You would like to exit the maze. Goodbye!")
-            
             else:
                 print("You would like to exit the maze. Goodbye!")
             
