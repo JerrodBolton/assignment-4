@@ -6,7 +6,8 @@
 
 # I would like to make a program that simulates a simple Maze game. Where a people can navigate through a maze using text commands.
 
-
+character_detail = []
+# This is a function that allows the user to navigate through the maze.
 def  maze_navigation():
     print("=======================================================")
     print("You are in round one of the maze. You can move north, south, east, or west.")
@@ -25,19 +26,20 @@ def  maze_navigation():
     # This is the first round that the user will play through.
     # In this round the user needs to go south to move to the next round.
     # Once the user inputs south they will move to round two b/c the while loop will end.
-
+    # this is a wile loop for round one of the maze game. that will continue until the right direction is given which is south. 
         while directions != "south":
             print("You moved", directions, "and found a dead end. Try again!")
             directions = input("What directions would like to go? (north/south/east/west): ").lower()
         
         print("=======================================================")
-        print("        You moved south and move to round two!         ")
+        print("          You moved south and move to round two!"       )
         print("=======================================================")
 
         directions = input("Round 2: What directions would like to go? (north/south/east/west): ").lower()
 
     # Now I need to make the second round that the user will play through. But it need to keep going until the right direction is chosen is given.
-
+    #  this is a wile loop for round two of the maze game.
+    
         while directions != "west":
             print("You moved", directions, "and found a dead end. Try again!") 
             directions = input("What directions would like to go? (north/south/east/west): ").lower()
@@ -67,17 +69,17 @@ def  maze_navigation():
 
         print("=======================================================")
         print(" You moved", directions, "and found yourself back at the started in the maze. Exactly where you need to be! Live large! Be happy, and play again if you need.")
-
+ # this is a else the last part of the maze game. 
     else:
         print("You chose not to start the game. Goodbye!")
-    
         
 def create_character():  
     # I also would lie to save the character details to a text file. 
     # Saving the character by name went a person is playing. 
 
     save_character = input("Would you like to save your character? (yes/no): ")
-    if save_character == 'yes' or save_character == 'y':    
+    if save_character == 'yes' or save_character == 'y':
+        # This section collects character details from the user.    
         character_name =  input("What is your character's name? :  ")
         character_gender = input("What is the gender of the your character? : ")
         character_design = input("Describe your character's appearance: ") 
@@ -111,23 +113,17 @@ def create_character():
             print(f"Great! Your character {character_name} has been created.")
             print("          Now, let's navigate through the maze!"        )
             print("=======================================================")
-            
 
-    
-        # character_detail.append(character_name)
-        # character_detail.append(character_design)
-        # character_detail.append(character_origin)
-        # character_detail.append(character_eye_color)
-        # character_detail.append(character_hair_color)
-        # character_detail.append(character_age)
+        character_detail.append(character_name)
+        character_detail.append(character_design)
+        character_detail.append(character_origin)
+        character_detail.append(character_eye_color)
+        character_detail.append(character_hair_color)
+        character_detail.append(character_age)
 
-
-    
 
     else:
         print("You chose not to save your character.")
-    
-
 
 
 print("=======================================================")
@@ -144,6 +140,7 @@ character_is_made = input("Do you have a character saved? If not, let's create o
 
 if character_is_made == 'yes' or character_is_made == 'y':
   print("Great! Let's proceed to the maze navigation.")
+# This calling the function allows the user to navigate through the maze.
   maze_navigation()
 else:
   create_character()
